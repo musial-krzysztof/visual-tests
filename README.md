@@ -23,3 +23,41 @@ https://user-images.githubusercontent.com/109053279/178185429-8de77574-cc2f-429f
 <p align="center">
   ❤️ Feel free to create issues and contributions for features or bugs to this project.
 </p>
+
+## 😃 Pierwszy krok po sklonowaniu repozytorium na lokalny dysk
+
+- otwórz konsolę w głównej lokalizacji lokalnego repozytorium (folder VISUAL-TESTS-PRECY") i wpisz poniższą komendę, aby zainstalować wszystkie paczki z folderu package.json :
+
+```bash
+npm install
+```
+## 😃 Drugi krok po sklonowaniu repozytorium na lokalny dysk
+
+- Wejdź na https://www.browserstack.com/users/sign_up?ref=percy, stwórz konto i swój pierwszy projekt w usłudze Percy
+
+- na dole strony znajdziesz swój unikalny token, skopiuj go i użyj poniższej komendy w konsoli, aby zdefniować token jako zmienną środowiskową w Twoim lokalnym repozytorium (przykład dla konsoli PowerShell)
+
+```bash
+$env:PERCY_TOKEN = "wklej twój skopiowany token tutaj"
+```
+- wpisz komendę poniższą komendę i upewnij się, że na liście zmiennych środowiskowych znajduje się zmienna PERCY_TOKEN:
+
+```bash
+dir env:
+```
+
+## Uruchomienie aplikacji na lokalnym serwerze
+
+- wpisz w konsoli poniższą komendę:
+
+```bash
+npm run start
+```
+- po jej wykonaniu, otworzy się karta przeglądarki pod adreses http://localhost:3001/todo_react_app z Twoją aplikacją
+
+## Uruchomienie testów
+
+- wpisz w konsoli poniższą komendę:
+```bash
+npm run percy-test
+```
