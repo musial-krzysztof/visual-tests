@@ -104,6 +104,7 @@ export default function App() {
 						}}
 						centered>
 						<TextInput
+							data-testId='taskTitleInput'
 							mt={'md'}
 							ref={taskTitle}
 							placeholder={'Task Title'}
@@ -111,6 +112,7 @@ export default function App() {
 							label={'Title'}
 						/>
 						<TextInput
+							data-testId='taskSummaryInput'
 							ref={taskSummary}
 							mt={'md'}
 							placeholder={'Task Summary'}
@@ -125,6 +127,7 @@ export default function App() {
 								Cancel
 							</Button>
 							<Button
+								data-testId='createTaskButton'
 								onClick={() => {
 									createTask();
 									setOpened(false);
@@ -184,6 +187,7 @@ export default function App() {
 							</Text>
 						)}
 						<Button
+							data-testId='newTaskButton'
 							onClick={() => {
 								setOpened(true);
 							}}
