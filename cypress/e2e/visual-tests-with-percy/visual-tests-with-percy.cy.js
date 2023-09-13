@@ -6,14 +6,21 @@
       cy.visit('')
     })
 
-    it('Percy tests', () => {
+    it.only('Percy tests', () => {
+      cy.get('[data-testid="newTaskButton"]').should('be.visible')
+      // cy.percySnapshot('Main page')
+
       cy.get('[data-testid="newTaskButton"]').should('be.visible').click()
+      // cy.percySnapshot('Opened New Task Modal')
+
       cy.get('[data-testid="taskTitleInput"]').should('be.visible').type('First task')
       cy.get('[data-testid="taskSummaryInput"]').should('be.visible').type('Summary for First task')
-      cy.get('[data-testid="taskSummaryInput"]').should('be.visible').click()
+      cy.get('[data-testid="createTaskButton"]').should('be.visible').click()
+      cy.get('[data-testid="trashButton"]').should('be.visible')
+      // cy.percySnapshot('Task displayed on the list')
     })
 
-    it.only('CSS assertions in Cypress', () => {
+    it('CSS assertions in Cypress', () => {
       cy.get('[data-testid="newTaskButton"]').should('be.visible')
         .and('contain', 'New Task')
         .and('have.css', 'font-size', '14px')

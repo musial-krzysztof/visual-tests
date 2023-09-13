@@ -164,6 +164,7 @@ export default function App() {
 											<Group position={'apart'}>
 												<Text weight={'bold'}>{task.title}</Text>
 												<ActionIcon
+													data-testId='trashButton'
 													onClick={() => {
 														deleteTask(index);
 													}}
